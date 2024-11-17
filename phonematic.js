@@ -72,7 +72,7 @@ function translate_callsign(input){
             parsed_token = phonetic_map[token];
             morse_char = morse_alphabet[token];
             morse_content = morse_content.concat(`<span> ${morse_char} </span>`)
-            country_content = country_content.concat(`<span style="color:red;"> ${parsed_token} </span>`)
+            country_content = country_content.concat(`<span style="color:green; font-size: 28;"> ${parsed_token} </span>`)
         }
 
         // Look up the operating country for additional info
@@ -97,7 +97,7 @@ function translate_callsign(input){
             parsed_token = phonetic_map[token];
             morse_char = morse_alphabet[token];
         }
-        callsign_content = callsign_content.concat(`<span> ${parsed_token} </span>`)
+        callsign_content = callsign_content.concat(`<span style="font-size: 28;"> ${parsed_token} </span>`)
         morse_content = morse_content.concat(`<span> ${morse_char} </span>`)
     }
     callsign_content = callsign_content.concat(`<p>${morse_content}</p>`)
@@ -133,7 +133,11 @@ function translate_callsign(input){
             default:
                 parsed_token = "";
         }
-        mode_out = mode_out.concat(`<span style="color:blue;"> ${parsed_token} </span>`)        
+        mode_out = mode_out.concat(`<span style="color:blue; font-size: 28;"> ${parsed_token} </span>`)
+        mode_out = mode_out.concat(`<p><span> </br> </span></p>`)
+        mode_out = mode_out.concat(`<p> </br> </p>`)
+        mode_out = mode_out.concat(`<p> </br> </p>`)
+
     }
 
     document.getElementById('country_output').innerHTML = country_content;
