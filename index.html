@@ -1,0 +1,27 @@
+<html>
+<script src="dxcc.js"></script>
+<script src="phonematic.js"></script>
+<link href="style.css" rel="stylesheet">
+<body>
+    <div id="container" class="container-fluid">
+    <h2>Callsign Decoder</h2>
+    <div id="input">
+    <input id="callsign" autocomplete="off" type="text" onkeyup="translate_callsign(document.getElementById('callsign').value)">
+    </div>
+    <hr>
+    <div id="output">
+        <div class="output_block" id="country_output">
+        </div>
+        <div class="output_block" id="callsign_output">
+        </div>
+        <div class="output_block" id="mode_output">
+        </div>
+    </div>
+    <hr>
+    <h2>Phonetic Alphabet</h2>
+    <center>
+    <table id="phonetics">
+    </table>
+    </center>
+</body>
+</html>
