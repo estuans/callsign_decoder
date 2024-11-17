@@ -126,6 +126,10 @@ function translate_callsign(input){
                 mode_out = "<h3>Operating Mode</h3>"
                 parsed_token = " Mobile 🚗";
                 break;
+            case "/A":
+                mode_out = "<h3>Operating Mode</h3>"
+                parsed_token = " Alternative ";
+                break;
             default:
                 parsed_token = "";
         }
